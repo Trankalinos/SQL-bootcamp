@@ -1,0 +1,24 @@
+## Created a Store database of clothing articles. Provided each item with an arbitrary number.
+## First SQL statement lists all 15 items by name and price, and orders them by price ascending.
+## Second SQL statement provides the average price of all products.
+CREATE TABLE products (id integer primary key, name text, price real);
+
+INSERT INTO products VALUES
+    (1, 't-shirt', 10.99),
+    (2, 'pants', 10.98),
+    (3, 'jeans', 10.97),
+    (4, 'belt', 10.96),
+    (5, 'boxers', 10.95),
+    (6, 'shorts', 10.94),
+    (7, 'socks', 10.93),
+    (8, 'sunglasses', 10.92),
+    (9, 'hat', 10.91),
+    (10, 'watch', 10.90),
+    (11, 'jacket', 10.89),
+    (12, 'backpack', 10.88),
+    (13, 'crossbody bag', 10.87),
+    (14, 'shoes', 10.86),
+    (15, 'tie', 10.85);
+
+SELECT name, price FROM products ORDER BY price asc;
+SELECT avg(price) from products;
